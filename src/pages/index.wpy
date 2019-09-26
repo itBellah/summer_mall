@@ -1,0 +1,23 @@
+<style lang="less">
+</style>
+<template>
+  <view class="container">
+    <view>首页</view>
+  </view>
+</template>
+
+<script>
+/**
+ * 没什么实际作用的页面，当做其他页面的模板
+*/
+import wepy from 'wepy'
+export default class Index extends wepy.page {
+  config = {
+    navigationBarTitleText: 'shopmall'
+  }
+
+  data = {}
+
+  methods = {}
+}
+</script>

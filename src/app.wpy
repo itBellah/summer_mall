@@ -1,0 +1,87 @@
+<style lang="less">
+</style>
+
+<script>
+import wepy from 'wepy'
+import 'wepy-async-function'
+import '@/baseAPI.js'
+
+export default class extends wepy.app {
+  config = {
+    pages: [
+      // 路径最后的后缀名不用写，是个路由地址，会报错
+      'pages/tabs/home',
+      'pages/tabs/cates',
+      'pages/tabs/search',
+      'pages/tabs/cart',
+      'pages/tabs/me',
+      'pages/goods_list',
+      'pages/goods_detail/main'
+    ],
+    window: {
+      // 下拉 loading 的样式页面背景色
+      backgroundTextStyle: 'dark',
+      // 头部导航栏背景色
+      navigationBarBackgroundColor: '#D81E06',
+      // 导航栏标题文本
+      navigationBarTitleText: 'shopmall',
+      // 导航条标题文字颜色
+      navigationBarTextStyle: 'white'
+    },
+    tabBar: {
+      // 选中的文本颜色
+      selectedColor: '#D81E06',
+      // tabBar 列表
+      list: [
+        {
+          // 页面路径
+          pagePath: 'pages/tabs/home',
+          // 显示文本
+          text: '首页',
+          // 默认图标(这里的 / 表示dist 目录，不是根目录)
+          iconPath: '/assets/home.png',
+          // 选中时图标
+          selectedIconPath: '/assets/home-active.png'
+        },
+        {
+          pagePath: 'pages/tabs/cates',
+          text: '分类',
+          iconPath: '/assets/cates.png',
+          selectedIconPath: '/assets/cates-active.png'
+        },
+        {
+          pagePath: 'pages/tabs/search',
+          text: '搜索',
+          iconPath: '/assets/search.png',
+          selectedIconPath: '/assets/search-active.png'
+        },
+        {
+          pagePath: 'pages/tabs/cart',
+          text: '购物车',
+          iconPath: '/assets/cart.png',
+          selectedIconPath: '/assets/cart-active.png'
+        },
+        {
+          pagePath: 'pages/tabs/me',
+          text: '我的',
+          iconPath: '/assets/my.png',
+          selectedIconPath: '/assets/my-active.png'
+        }
+      ]
+    }
+  }
+
+  globalData = {
+    userInfo: null
+  }
+
+  constructor() {
+    super()
+    this.use('requestfix')
+    // 开启 async-await 功能
+    this.use('promisify')
+  }
+
+  onLaunch() {}
+}
+</script>

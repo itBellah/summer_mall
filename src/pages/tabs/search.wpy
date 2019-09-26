@@ -1,0 +1,21 @@
+<template>
+  <view class="container">
+    <view>search 页面</view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Search extends wepy.page {
+  config = {
+    navigationBarTitleText: 'shopmall'
+  }
+
+  data = {}
+
+  methods = {}
+}
+</script>
+
+<style lang="less">
+</style>

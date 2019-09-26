@@ -1,0 +1,21 @@
+<template>
+  <view class="container">
+    <view>goods_list 页面</view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Cart extends wepy.page {
+  config = {
+    navigationBarTitleText: 'shopmall'
+  }
+
+  data = {}
+
+  methods = {}
+}
+</script>
+
+<style lang="less">
+</style>
